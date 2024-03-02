@@ -6,7 +6,9 @@ def get_requirements(file_path:str)->list[str]:
     this funtion will return the list of requirements
     """
     requirements=[]
-    with open()
+    with open(file_path) as file_obj:
+        requirements= file_obj.readlines()
+        requirements= [for req.replace("\n"," ")for req in requirements]
 
 setup(
 name= "student_performance_prediction",
